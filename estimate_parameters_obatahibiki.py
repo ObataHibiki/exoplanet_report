@@ -68,6 +68,7 @@ data = np.array([
 t = data[:, 0]
 v = data[:, 1]
 
+##Pの初期値を変更
 init_params = [
     400.0,       # P [day]
     10.0,        # Kp [cm/s]
