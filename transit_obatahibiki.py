@@ -60,21 +60,21 @@ fig, ax1 = plt.subplots(figsize=(10,5))
 
 # 左軸に木星サイズの光度
 ax1.plot(t, flux_a, color='tab:blue', label='(a) R=R_J, M=13M_J')
-#fontsizeのみ自分で設定
+##fontsizeのみ自分で設定##
 ax1.set_ylabel('Relative Flux (a)', color='tab:blue', fontsize=14)
 ax1.tick_params(axis='y', labelcolor='tab:blue')
-##軸の設定のし直し
+##軸の設定のし直し##
 ax1.set_ylim(1 - 1.2*(R_jup/R_sun)**2, 1 + 0.2*(R_jup/R_sun)**2)
 
 # 右軸に地球サイズの光度
 ax2 = ax1.twinx()
 ax2.plot(t, flux_b, color='tab:green', label='(b) R=R_⊕, M=0.6M_⊙')
-#fontsizeのみ自分で設定
+##fontsizeのみ自分で設定##
 ax2.set_ylabel('Relative Flux (b)', color='tab:green', fontsize=14)
 ax2.tick_params(axis='y', labelcolor='tab:green')
-##軸の設定のし直し
+##軸の設定のし直し##
 ax2.set_ylim(1 - 1.2*(R_earth/R_sun)**2, 1 + 0.2*(R_earth/R_sun)**2)
-##自動でオフセットがついていたため、消去
+##自動でオフセットがついていたため、消去##
 ax2.get_yaxis().get_major_formatter().set_useOffset(False)
 
 ax1.set_xlabel('Time [day]')
